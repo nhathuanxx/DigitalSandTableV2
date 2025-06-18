@@ -181,7 +181,7 @@ export default function ProjectDetail() {
             <TouchableOpacity onPress={handleGoBack}>
               <Icon name="arrow-left" size={16} color="#333" />
             </TouchableOpacity>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Text style={ProjectDetailStyles.projectName} numberOfLines={2} ellipsizeMode="tail">
                 {project.name}
               </Text>
@@ -208,7 +208,7 @@ export default function ProjectDetail() {
                 closeMapTypes();
                 closeTree();
               }} style={ProjectDetailStyles.actionButton}>
-                <Icon name="team" size={20} color="black" />
+                <Icon name="account-group" size={20} color="black" />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => {
                 toggleMapTypes();
@@ -223,7 +223,7 @@ export default function ProjectDetail() {
                 closeMapTypes();
                 closeDropdown();
               }} >
-                <Icon name="apartment" size={16} color="black" />
+                <Icon name="sitemap" size={16} color="black" />
               </TouchableOpacity>
 
               {/* {showTree && (

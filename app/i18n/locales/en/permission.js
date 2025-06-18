@@ -1,10 +1,10 @@
 export default {
     name: "Permission",
     attributes: {
-        locationPermission: 'Location Permission',
-        accessYourLocation: 'This app needs access to your location.',
-        askMeLater: 'Ask me later',
-        cancel: 'Cancel',
-        ok: 'OK',
+        locationPermission: 'Quyền truy cập vị trí',
+        accessYourLocation: 'Ứng dụng này cần truy cập vào vị trí của bạn.',
+        askMeLater: 'Hỏi lại sau',
+        cancel: 'Hủy',
+        ok: 'Đồng ý',
     },
 };

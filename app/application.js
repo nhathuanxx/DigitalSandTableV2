@@ -2,55 +2,19 @@ import { enableScreens } from "react-native-screens";
 enableScreens();
 import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaInsetsContext } from "react-native-safe-area-context";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Linking, Alert, Platform } from 'react-native'
-// import * as loginAction from "@app/storage/action/login";
-// import * as appActions from "./storage/action/app";
-import constants from "@app/config/constants";
-import { getTokens, getPartner, getUserInfo } from "@app/libs/auth";
-import FlashMessage from "react-native-flash-message";
 import storage from "@app/libs/storage";
-import ChooseLocation from "./modules/screens/ChooseLocation/ChooseLocation";
-import Overview from "./modules/screens/Home/OverView/Overview";
-import Route from "@app/modules/screens/Route/Route"
 import i18n from "@app/i18n/i18n";
-import MapDisplaySetting from "@app/modules/screens/Settings/MapDisplaySetting/MapDisplaySetting";
-import WarningSetting from "@app/modules/screens/Settings/WarningSetting/WarningSetting";
-import SystemSetting from "@app/modules/screens/Settings/SystemSetting/SystemSetting";
-import SearchScreen from "./modules/screens/Search/SearchScreen/SearchScreen";
-// import Search from "./modules/screens/Search/Search";
-import SearchDirections from "./modules/screens/Search/SearchDirections/SearchDirections";
-import FavoriteAddress from "./modules/screens/Search/FavoriteAddress/FavoriteAddress";
-import LocationInfo from "./modules/screens/Search/LocationInfo/LocationInfo";
-import LocationSelection from "./modules/screens/Route/LocationSelection/LocationSelection";
-import { RadioProvider } from "./modules/screens/Radio/RadioProvider";
-import LocationList from "./modules/screens/Search/LocationList/LocationList";
-import AsyncStorage from '@react-native-community/async-storage';
-import { ThemeProvider } from "./modules/components/context/ThemeContext";
-import Account from "@app/modules/screens/Account/Account";
-import Violation from "@app/modules/screens/Account/Violation/Violation";
 import { startBackgroundFetch } from "./libs/backgroundtask";
-import { navigationRef, navigate } from "@app/libs/RootNavigation";
-import MoveHistory from "./modules/screens/MoveHistory/MoveHistory";
-import Province from "@app/modules/screens/Account/Camera/Province/Province";
-import ProvinceCamera from "@app/modules/screens/Account/Camera/ProvinceCamera/ProvinceCamera";
-import CameraDetail from "@app/modules/screens/Account/Camera/CameraDetail/CameraDetail";
 import { configurePushNotifications, requestNotificationPermission } from "@app/libs/NotificationService";
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
-import { OrientationProvider } from './modules/components/context/OrientationContext';
 import { initializeSslPinning, addSslPinningErrorListener } from 'react-native-ssl-public-key-pinning';
 import { SSL_PINNING_CONFIG } from "@app/config/pinning";
-
-
-
-import Login from "@app/modules/screens/Auth/Login"
-import Map from "@app/modules/screens/Map/Map"
 import { AuthProvider } from "@app/modules/context/AuthContext";
 import { GlobalProvider } from "@app/modules/context/GlobalContext";
-import CustomAlert from '@app/modules/components/alert/CustomAlert';
 import AppNavigator from '@app/navigation/AppNavigator';
 
 
@@ -145,32 +109,11 @@ const Application = (props) => {
     <SafeAreaInsetsContext.Consumer>
       {(insets) => (
         <Fragment>
-          <ThemeProvider>
-            <OrientationProvider>
-              <RadioProvider>
                 <GlobalProvider>
                   <AuthProvider>
-                    {/* <NavigationContainer ref={navigationRef}>
-                      {
-                        <Stack.Navigator
-                          initialRouteName="Login"
-                          screenOptions={{
-                            headerShown: false,
-                          }}
-                        >
-                          <Stack.Screen name="Login" component={Login} />
-                          <Stack.Screen name="Map" component={Map} />
-                        </Stack.Navigator>
-                      }
-                      <CustomAlert />
-                      <FlashMessage position="top" style={{ marginTop: 16 }} />
-                    </NavigationContainer> */}
                     <AppNavigator />
                   </AuthProvider>
                 </GlobalProvider>
-              </RadioProvider>
-            </OrientationProvider>
-          </ThemeProvider>
         </Fragment>
       )}
     </SafeAreaInsetsContext.Consumer>

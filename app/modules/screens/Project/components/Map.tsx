@@ -6,6 +6,9 @@ import {
 } from 'react-native';
 import MapLibreGL from '@maplibre/maplibre-react-native';
 
+MapLibreGL.setAccessToken(null);
+
+
 
 const baseLat = 21.0285;
 const baseLng = 105.8542;
