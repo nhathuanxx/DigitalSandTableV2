@@ -1,0 +1,20 @@
+export default {
+        name: "Thông báo",
+        attributes: {
+                noMyLocation: "Không tìm thấy vị trí của bạn!",
+                setMyLocation: "Có thể bạn chưa đồng ý cho Goong Map sử dụng vị trí của bạn.",
+                isFavorite: "Bạn có chắc chắn muốn thay đổi?",
+                setFavorite: "Địa điểm bạn chọn đã được lưu trong một danh mục khác (nhà riêng, cơ quan, yêu thích). Việc thay đổi sẽ xóa địa điểm khỏi danh mục đã lưu trước đó.",
+                success: "Thành công",
+                loading: "Đang tải...",
+                error: "Máy chủ không phản hồi, vui lòng thử lại sau!",
+                failed: "Thất bại",
+                noNotification: "Không có thông báo nào",
+                warning: "Đã xảy ra lỗi, vui lòng thử lại.",
+                readAll: "Bạn đã đọc tất cả thông báo thành công",
+                oke: "OK",
+                errorHistory: "Có lỗi khi xóa địa điểm",
+                closeNavigationTitle: "Bạn có muốn kết thúc chuyến đi?",
+                closeNavigationBody: "Bạn sẽ được quay về màn hình xem đường.",
+        },
+};

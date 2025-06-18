@@ -1,0 +1,20 @@
+export default {
+        name: "Báo lỗi",
+        attributes: {
+                noMyLocation: "Your location could not be found!",
+                setMyLocation: "You may not have granted Goong Map permission to use your location.",
+                isFavorite: "Are you sure you want to change this?",
+                setFavorite: "The location you selected is already saved in another category (home, office, favorite). Changing this will remove it from the previously saved category.",
+                success: "Success",
+                loading: "Loading...",
+                error: "The server is not responding, please try again later!",
+                failed: "Failed",
+                noNotification: "No notifications",
+                warning: "An error occurred, please try again.",
+                readAll: "You have successfully read all notifications",
+                oke: "OK",
+                errorHistory: "An error occurred while deleting the location",
+                closeNavigationTitle: "Do you want to end the trip?",
+                closeNavigationBody: "You will be returned to the route view screen.",
+        },
+};

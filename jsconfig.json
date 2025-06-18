@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./app/*"
+      ],
+      "@app/*": [
+        "./app/*"
+      ],
+      "@app/assets/*": [
+        "./assets/*"
+      ],
+      "@app/config/*": [
+        "./app/config/*"
+      ],
+      "@app/libs/*": [
+        "./app/libs/*"
+      ],
+      "@app/service/*": [
+        "./app/service/*"
+      ],
+      "@app/modules/*": [
+        "./app/modules/*"
+      ],
+      "@app/storage/*": [
+        "./app/modules/*"
+      ],
+      "@app/i18n/*": [
+        "./app/i18n/*"
+      ],
+      "@app/theme/*": [
+        "./app/theme/*"
+      ],
+      "@app/navigation/*": [
+        "./app/navigation/*"
+      ],
+    }
+  }
+}

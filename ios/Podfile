@@ -1,0 +1,42 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-permissions/scripts/setup'
+
+platform :ios, '13.6'
+
+# use_frameworks! :linkage => :static
+setup_permissions([
+  'Camera',
+  'LocationAccuracy',
+  'LocationAlways',
+  'LocationWhenInUse',
+  'MediaLibrary',
+  'Microphone',
+  'Notifications',
+  'PhotoLibrary',
+])
+
+$RNMBGL_Use_SPM = {
+  url: "https://github.com/maplibre/maplibre-gl-native-distribution",
+  requirement: {
+    kind: "upToNextMajorVersion",
+    minimumVersion: "5.13.0"
+  },
+  product_name: "Mapbox"
+}
+pod 'Obfuscator'
+
+target 'GoongMapLite' do
+  config = use_native_modules!
+  # use_react_native!(:path => config["reactNativePath"])
+  $RNFirebaseAnalyticsEnableAdSupport = true
+  use_react_native!(:path => config[:reactNativePath], :hermes_enabled => false)
+
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+    $RNMBGL.post_install(installer)
+  end
+end

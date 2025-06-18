@@ -1,0 +1,22 @@
+{
+    "compact": true,
+    "controlFlowFlattening": false,
+    "deadCodeInjection": true,
+    "debugProtection": false,
+    "debugProtectionInterval": 0,
+    "disableConsoleOutput": true,
+    "identifierNamesGenerator": "hexadecimal",
+    "log": false,
+    "renameGlobals": false,
+    "rotateStringArray": true,
+    "selfDefending": false,
+    "shuffleStringArray": true,
+    "splitStrings": true,
+    "stringArray": true,
+    "stringArrayEncoding": [
+        "base64"
+    ],
+    "stringArrayThreshold": 0.75,
+    "unicodeEscapeSequence": true,
+    "ignoreRequireImports": true
+}

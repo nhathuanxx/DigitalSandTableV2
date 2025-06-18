@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1005570990583",
+    "project_id": "goongmap-be22f",
+    "storage_bucket": "goongmap-be22f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005570990583:android:30d340d7d3dedcb1818ef2",
+        "android_client_info": {
+          "package_name": "imap.goong.map.lite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnsjtAeJEmZrneivDBCBKQClTn7NOzHWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
